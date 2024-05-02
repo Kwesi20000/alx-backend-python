@@ -2,7 +2,7 @@
 """
 A module for zooming in on a tuple
 """
-from typing import Tuple, Any
+from typing import List, Tuple, Optional
 
 
 def zoom_array(lst: Tuple[Any, ...], factor: int = 2) -> Tuple:
