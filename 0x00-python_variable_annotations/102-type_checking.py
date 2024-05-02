@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-A function for zooming in on a tuple
+A module for zooming in on a tuple
 """
 from typing import Tuple, Any
 
