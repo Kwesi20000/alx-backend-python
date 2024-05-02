@@ -2,22 +2,19 @@
 """
 A function for zooming in on a tuple
 """
-from typing import List, Tuple, Optional
+from typing import Tuple, Any
 
 
-def zoom_array(lst: Tuple[int, ...], factor: Optional[int] = 2) -> List[int]:
-    """
-    these returns a list
-    """
-    zoomed_in: List[int] = [
+def zoom_array(lst: Tuple[Any, ...], factor: int = 2) -> Tuple:
+    zoomed_in: Tuple = tuple(
         item for item in lst
-        for i in range(factor)
-    ]
+        for _ in range(factor)
+    )
     return zoomed_in
 
 
-array: Tuple[int, int, int] = (12, 72, 91)
+array = (12, 72, 91)  # Make the input list a tuple
 
-zoom_2x: List[int] = zoom_array(array)
+zoom_2x = zoom_array(array)
 
-zoom_3x: List[int] = zoom_array(array, 3)
+zoom_3x = zoom_array(array, 3)  # Use an integer for the factor
